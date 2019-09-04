@@ -6,83 +6,160 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </head>
 <body>
     <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Name</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your name">
+        <div class="form-group"> 
+          <input type="text" class="form-control" id="name" placeholder="Your name">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="text" class="form-control" id="photo" placeholder="link to profile photo">
+        </div>
+
+        <div class="form-group">
+          <label for="Question1">Generally, you enjoy walking in the park and find it relaxing.</label>
+          <select class="form-control" id="Question1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+            <label for="Question2">You enjoy eating in fine restaurants frequently.</label>
+            <select class="form-control" id="Question2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div> 
+
+        <div class="form-group">
+            <label for="Question3">You like to hang out at bars occassionally.</label>
+            <select class="form-control" id="Question3">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
+
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Survey</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
+            <label for="Question4">You love drinking red wine.</label>
+            <select class="form-control" id="Question4">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
         </div>
+      
         <div class="form-group">
-          <label for="exampleFormControlSelect2">Example multiple select</label>
-          <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
+            <label for="Question5">You are religious and attend church often.</label>
+            <select class="form-control" id="Question5">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+        </div> 
+
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-      </form>
+            <label for="Question6"> You get high scores on standardized tests.</label>
+            <select class="form-control" id="Question6">
+            <option value="1">1</option>
+             <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select>
+            </div> 
 
-      Tell me about yourself.
-      Name (Required)
-      
-      Link to Photo Image (Required)
-      
-      Question 1
-      
-      Generally, you enjoy walking in the park and find it relaxing.
-      
-      Question 2
-      You enjoy eating in fine restaurants frequently.
-      
-      Question 3
-      You like to hang out at bars occassionally.
-      
-      Question 4
-      You love drinking red wine.
-      
-      Question 5
-      You are religious and attend church often.
-      
-      Question 6
-      You like taking standardized tests and get high test scores.
+            <div class="form-group">
+                    <label for="Question7"> You love children and desire to have serveral.</label>
+                    <select class="form-control" id="Question7">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div> 
 
-      Question 7
-      You love children and desire to have serveral.
-
-      Questiion 8
-      You have a passion for the arts and music.
-
-      Question 9
-      You often think about investing and financial stability. 
-
-      Question 10 
-      You are inspired to eat healthy and excercise regularly.
-
+            
+            <div class="form-group">
+                        <label for="Question8">You have a passion for art and music</label>
+                        <select class="form-control" id="Question8">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        </select>
+                    </div> 
+      
+                
+            <div class="form-group">
+                    <label for="Question9">You often think about investing and financial stability.</label>
+                    <select class="form-control" id="Question9">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div> 
+  
+                <div class="form-group">
+                        <label for="Question10">You are inspired to eat healthy and excercise regularly.</label>
+                        <select class="form-control" id="Question10">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        </select>
+                    </div> 
+    </form>
+    <button id="submit" class="btn btn-primary" type="submit">Submit</button>
+   
 </body>
 </html>
 
+<script type="text/javascript">
+    $("#submit").on("click", function(event){
+        event.preventDefault()
+        var newUser = {
+            name:$("#name").val(),
+            photo:$("#photo").val(),
+            scores:[
+              $("#Question1").val(),
+              $("#Question2").val(),
+              $("#Question3").val(),
+              $("#Question4").val(),
+              $("#Question5").val(),
+              $("#Question6").val(),
+              $("#Question7").val(),
+              $("#Question8").val(),
+              $("#Question9").val(),
+              $("#Question10").val()
+            ]       
+        }
 
+        
+        
+    })  
+</script>
 
 
 
