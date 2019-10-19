@@ -12,8 +12,10 @@
 </head>
 <body>
   <div class="container"> 
+   
     <form>
-        <div class="form-group"> 
+        <div class="form-group mt-3"> 
+          <h3>Complete the survey below.</h3>
           <input type="text" class="form-control" id="name" placeholder="Your name">
         </div>
         <div class="form-group">
@@ -141,8 +143,31 @@
                         <option value="5">5</option>
                         </select>
                     </div> 
-    </form>
-    <button id="submit" class="btn btn-primary" type="submit">Submit</button>
+      </form>
+      <button id="submit" class="btn btn-primary" type="submit">Submit</button>
+
+      <div id="friend" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your new friend</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2 id="friendName"></h2>
+              <img id="friendPhoto" src="#" style="max-width:100%; height:auto;">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
    </div>
 </body>
 </html>
@@ -150,8 +175,6 @@
 <script type="text/javascript">
     $("#submit").on("click", function(event){
         event.preventDefault()
-        console.log(typeof $("#Question1").val())
-        console.log(typeof parseInt($("#Question1").val(), 10))
 
         var newUser = {
             name:$("#name").val(),
@@ -170,9 +193,6 @@
             ]       
         }
 
-        console.log(newUser.scores)
-        console.log(typeof newUser.scores[0])
-
         $.ajax({
           type: 'POST',
           url: '/api/friends',
@@ -180,12 +200,11 @@
           data: JSON.stringify(newUser),
           dataType: 'json',
           success: function(data) {
-
-          }
+            $("#friendName").text(data.name)
+            $("#friendPhoto").attr("src", data.photo)
+            $("#friend").modal("toggle")
+          }        
         });
-
-        
-        
     })  
 </script>
 
